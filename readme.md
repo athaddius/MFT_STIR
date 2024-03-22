@@ -1,4 +1,6 @@
 
+This is a fork of MFT to support installation and usage with the STIR dataset.
+eg. pip install MFT
 # MFT: Long-Term Tracking of Every Pixel
 
 [Project Page](https://cmp.felk.cvut.cz/~serycjon/MFT/)
