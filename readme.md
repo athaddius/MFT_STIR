@@ -29,6 +29,10 @@ Create and activate a new virtualenv:
 Then install all the dependencies:
 
     pip install torch numpy einops tqdm opencv-python scipy Pillow==9 matplotlib ipdb
+    pip uninstall torch numpy einops tqdm opencv-python scipy Pillow==9 matplotlib ipdb
+    
+    
+    pip install .
 
 
 ## Run the demo
