@@ -14,7 +14,7 @@ dependencies = [
     "tqdm",
     "opencv-python",
     "scipy",
-    "Pillow==9",
+    "Pillow>=9",
     "matplotlib",
     "ipdb"
 ]
