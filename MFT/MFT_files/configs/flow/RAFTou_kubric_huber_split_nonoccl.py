@@ -9,7 +9,7 @@ class AttrDict(dict):
         self.__dict__.update(kwargs)
 
 
-def get_config():
+def get_config(packagefile):
     conf = Config()
 
     conf.of_class = RAFTWrapper
@@ -23,6 +23,7 @@ def get_config():
     conf.raft_params = AttrDict(**raft_kwargs)
     # original model location:
     conf.model = 'MFT_files/checkpoints/raft-things-sintel-kubric-splitted-occlusion-uncertainty-non-occluded-base-sintel.pth'
+    conf.model = str(Path(packagefile, conf.model))
 
     conf.flow_iters = 12
 

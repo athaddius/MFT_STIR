@@ -22,6 +22,11 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/serycjon/MFT"
 
+[tool.hatch.build.targets.sdist]
+include = [
+  "MFT_files/*",
+]
+
 
 [tool.ruff]
 # Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.

@@ -1,6 +1,7 @@
 import logging
 import re
 from pathlib import Path
+from . import MFT_files
 logger = logging.getLogger(__name__)
 
 
@@ -44,12 +45,15 @@ class Config():
 
 def load_config(path):
     """ https://stackoverflow.com/a/67692 """
-    assert Path(path).exists(), f"config {path} does not exist!"
     import importlib.util
-    spec = importlib.util.spec_from_file_location("tracker_config", path)
-    foo = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(foo)
-    return foo.get_config()
+    import importlib
+    with importlib.resources.files(__package__) as package_path: # https://stackoverflow.com/questions/6028000/how-to-read-a-static-file-from-inside-a-python-package?noredirect=1&lq=1
+        path = Path(package_path, path)
+        assert Path(path).exists(), f"config {path} does not exist!"
+        spec = importlib.util.spec_from_file_location("tracker_config", path)
+        foo = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(foo)
+        return foo.get_config(package_path)
 
 
 def config_file_from_template(path, out_path=None, **kwargs):

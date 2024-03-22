@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def get_config():
+def get_config(package_file):
     conf = Config()
 
     conf.tracker_class = MFT

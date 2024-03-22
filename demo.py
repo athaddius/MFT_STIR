@@ -29,7 +29,7 @@ def parse_arguments():
                         default=Path('demo_in/ugsJtsO9w1A-00.00.24.457-00.00.29.462_HD.mp4'))
     parser.add_argument('--edit', help='path to a RGBA png with a first-frame edit', type=Path,
                         default=Path('demo_in/edit.png'))
-    parser.add_argument('--config', help='MFT config file', type=Path, default=Path('configs/MFT_cfg.py'))
+    parser.add_argument('--config', help='MFT config file', type=Path, default=Path('MFT_files/configs/MFT_cfg.py'))
     parser.add_argument('--out', help='output directory', type=Path, default=Path('demo_out/'))
     parser.add_argument('--grid_spacing', help='distance between visualized query points', type=int, default=30)
 
