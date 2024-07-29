@@ -1,8 +1,8 @@
 
 This is a fork of MFT to support installation and usage with the STIR dataset.
-eg. 
+Install via:
 ```
-pip install MFT
+pip install .
 ```
 Supports usage with the STIR dataset when installed, and used with [STIRMetrics](https://github.com/athaddius/STIRMetrics/)
 
