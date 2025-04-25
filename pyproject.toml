@@ -12,7 +12,7 @@ dependencies = [
     "numpy",
     "einops",
     "tqdm",
-    "opencv-python",
+    "opencv-contrib-python=4.5.5.64",
     "scipy",
     "Pillow>=9",
     "matplotlib",
